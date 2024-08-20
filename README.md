@@ -29,3 +29,23 @@ This is a code that visualizes the R-squared and MSE values ​​obtained in dr
 # src/unet/utils.py:
 In this code, the metrics for evaluating model performance are expanded to include accuracy, precision, and recall.
 
+## Method for processing images for measurement <a name="processing"></a>
+Step 1.Select an appropriate selection tool from ImageJ, for example *Rectangle* and select the part you want to keep.
+![](docs/img/step_01.png)
+
+Step 2.After selecting the selection, click Edit->Selection->Make Inverse to invert the selection.
+![](docs/img/step_02.png)
+
+Step 3.After confirming the inverted selection, click Edit->Cut to remove this part of the selection, and the remaining part is the part that the model wants to predict.
+![](docs/img/step_03.png)
+
+## Method for measuring the true length of plant stems <a name="measuring"></a>
+Step 1.Open the image in ImageJ and click Analyze->tool to open ROI Manager. Find and click the straight line tool in the selection tool above, right-click and select Segemented Line to anchor the plant stem part in the image (if you encounter a curved part, add an anchor point at the bend)..
+![](docs/img1/step_01.png)
+
+Step 2.After completing the anchor point confirmation selection, click Add in the ROI Manager to add the selection.
+![](docs/img1/step_02.png)
+
+Step 3.After adding, click Measure in ROI Manager to get the length in pixels, then click File->Save as to save the file locally (if the actual length is needed, use the following formula to convert: millimeters = (pixels * 25.4d) / dpi)..
+![](docs/img1/step_03.png)
+
