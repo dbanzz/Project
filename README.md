@@ -36,18 +36,18 @@ Step 1.Select an appropriate selection tool from ImageJ, for example *Rectangle*
 ![](docs/img/step01.png)
 
 Step 2.After selecting the selection, click Edit->Selection->Make Inverse to invert the selection.
-![](docs/img/step02.png)
+![](docs/img/step02.PNG)
 
 Step 3.After confirming the inverted selection, click Edit->Cut to remove this part of the selection, and the remaining part is the part that the model wants to predict.
-![](docs/img/step03.png)
+![](docs/img/step03.PNG)
 
 ## Method for measuring the true length of plant stems <a name="measuring"></a>
 Step 1.Open the image in ImageJ and click Analyze->tool to open ROI Manager. Find and click the straight line tool in the selection tool above, right-click and select Segemented Line to anchor the plant stem part in the image (if you encounter a curved part, add an anchor point at the bend)..
-![](docs/img1/step01.png)
+![](docs/img1/step01.PNG)
 
 Step 2.After completing the anchor point confirmation selection, click Add in the ROI Manager to add the selection.
-![](docs/img1/step02.png)
+![](docs/img1/step02.PNG)
 
 Step 3.After adding, click Measure in ROI Manager to get the length in pixels, then click File->Save as to save the file locally (if the actual length is needed, use the following formula to convert: millimeters = (pixels * 25.4d) / dpi).
-![](docs/img1/step03.png)
+![](docs/img1/step03.PNG)
 
